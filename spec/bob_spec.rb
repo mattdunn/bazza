@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'models/order'
 
 describe Bob do
   describe 'building an object' do

@@ -1,5 +1,12 @@
 require "bob/version"
 
+class Order
+  class << self
+    def build
+      new
+    end 
+  end
+end
+
 module Bob
-  # Your code goes here...
 end
