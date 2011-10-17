@@ -12,9 +12,12 @@ describe Bob do
       context 'when class exists' do
         before do
           class OrderBuilder
+            def build
+              Order.new
+            end
           end
         end
-        it 'should create an instance'  do
+        it 'should create an instance' do
           Order.build.should be_an_instance_of Order
         end
       end
