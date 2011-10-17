@@ -1,5 +1,6 @@
 class Class
   def build
-    new
+    klass = (self.name + 'Builder').to_class
+    return klass.nil? ? nil : klass.build
   end 
 end
