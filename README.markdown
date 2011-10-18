@@ -50,7 +50,6 @@ License
 TODO
 ----
 
-  * Gemfile: make rspec dev dependency
   * Overriding defaults
   * Reusing builders
   * Replace String>>#to_class implementation from stack overflow article with a spec'd/tested version
