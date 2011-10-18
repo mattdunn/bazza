@@ -4,7 +4,7 @@ require 'models/order'
 describe Bazza do
   describe 'building' do
     describe 'resolves builder class named #{ClassName}Builder' do
-      context 'but when class doesn\'t exist' do
+      context 'when class doesn\'t exist' do
         it 'returns nil' do
           Order.build.should be_nil
         end
@@ -17,7 +17,7 @@ describe Bazza do
             end
           end
         end
-        it 'creates an instance' do
+        it 'creates instance' do
           Order.build.should be_an_instance_of Order
         end
       end
@@ -25,7 +25,7 @@ describe Bazza do
   end  
         
   describe 'defaulting' do
-    context 'when defaults exist' do
+    context 'when default exists' do
       before do
         class OrderBuilder
           def build
@@ -33,8 +33,13 @@ describe Bazza do
           end
         end
       end
-      it 'creates instance with defaults' do
+      it 'creates instance with default' do
         Order.build.total.should == 22.34
+      end
+      context 'when overriding default' do
+        it 'creates instance with overidden default' do
+          Order.with(:total => 33.56).build.total.should == 33.56
+        end
       end
     end
   end
