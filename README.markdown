@@ -50,7 +50,6 @@ License
 TODO
 ----
 
-  * Class>>#build interpolate builder string rather than concat
   * Split bazza spec by building/defaulting to reduce nesting
   * Gemfile: make rspec dev dependency
   * Overriding defaults
