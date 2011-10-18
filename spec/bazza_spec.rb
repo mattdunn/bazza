@@ -25,11 +25,22 @@ describe Bazza do
   end  
         
   describe 'defaulting' do
+    before do
+      class OrderBuilder
+        def initialize(attrs = {})
+          @defaults = attrs
+        end
+        def build
+          Order.new(@defaults)
+        end
+      end
+    end
     context 'when default exists' do
       before do
         class OrderBuilder
-          def build
-            Order.new(:total => 22.34)
+          def initialize(attrs = {})
+            @defaults = {:total => 22.34}
+            @defaults.merge!(attrs)
           end
         end
       end
