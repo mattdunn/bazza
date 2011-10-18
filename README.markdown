@@ -9,9 +9,9 @@ Build objects easily:
   * reuse builder instances to create multiple objects
   * specialise builders
   * Readable usage
-  ```ruby
-  customer = Customer.with.Order.with(:total => 22.21).thats.active
-  ```
+```ruby
+customer = Customer.with.Order.with(:total => 22.21).thats.active
+```
 
 Why not a use factory?
 
@@ -64,7 +64,7 @@ customer = CustomerBuilder.with(:orderBuilder => orderBuilder).build
 
 Customer.with.Order.with(:total => 22.21).thats.active
 
-- #with
+- with
   - no args: assumes next token is class name of associated attribute
     - no-op, return self
     - next message expected to be class name, resolve via method missing?  
