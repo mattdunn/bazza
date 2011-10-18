@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
-
-require 'bob'
+require 'bazza'
 
 RSpec.configure do |config|
   config.mock_with :rspec

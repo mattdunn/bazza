@@ -1,17 +1,17 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "bob/version"
+require "bazza/version"
 
 Gem::Specification.new do |s|
-  s.name        = "bob"
-  s.version     = Bob::VERSION
+  s.name        = "bazza"
+  s.version     = Bazza::VERSION
   s.authors     = ["mattdunn"]
   s.email       = ["contact@mattonsoftware.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/mattdunn/bazza"
   s.summary     = %q{TODO: Write a gem summary}
   s.description = %q{TODO: Write a gem description}
 
-  s.rubyforge_project = "bob"
+  s.rubyforge_project = "bazza"
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")

@@ -1,7 +1,7 @@
 require 'spec_helper'
 require 'models/order'
 
-describe Bob do
+describe Bazza do
   describe 'building an object' do
     describe 'resolving builder class [ClassName]Builder' do
       context 'when no class exists' do

@@ -1,4 +1,4 @@
-bob - the builder
+bazza - the builder
 =======
 
 Build objects easily:
@@ -50,9 +50,8 @@ License
 TODO
 ----
 
-  * Rename github project to bazza
   * Class>>#build interpolate builder string rather than concat
-  * Split bob spec by building/defaulting to reduce nesting
+  * Split bazza spec by building/defaulting to reduce nesting
   * Gemfile: make rspec dev dependency
   * Overriding defaults
   * Reusing builders
