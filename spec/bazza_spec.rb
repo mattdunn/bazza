@@ -5,8 +5,8 @@ describe Bazza do
   describe 'building' do
     describe 'resolves builder class named #{ClassName}Builder' do
       context 'when class doesn\'t exist' do
-        it 'returns nil' do
-          Order.build.should be_nil
+        it 'raises an exception' do
+          expect { Order.build }.should raise_exception(Exception, "OrderBuilder class not found")
         end
       end
       context 'when class exists' do

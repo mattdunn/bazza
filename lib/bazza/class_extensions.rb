@@ -1,7 +1,7 @@
 class Class
   def build
     klass = "#{self.name}Builder".to_class
-    return klass.nil? ? nil : klass.new.build
+    return klass.nil? ? (raise "#{self.name}Builder class not found") : klass.new.build
   end 
   
   def with(args)
