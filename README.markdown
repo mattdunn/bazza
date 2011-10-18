@@ -1,4 +1,4 @@
-bazza - the builder
+bazza - the builder [![Build Status](https://secure.travis-ci.org/mattdunn/bazza.png)](http://travis-ci.org/mattdunn/bazza)
 =======
 
 Build objects easily:
