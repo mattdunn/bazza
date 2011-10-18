@@ -51,7 +51,6 @@ TODO
 ----
 
   * Overriding defaults
-    * refactor duplication in class_extensions.rb
   * Order>>#initialize attrs default to empty hash. Remove empty hash provision in specs.
   * Reusing builders
   * Replace String>>#to_class implementation from stack overflow article with a spec'd/tested version
