@@ -50,8 +50,6 @@ License
 TODO
 ----
 
-  * Overriding defaults
-  * Order>>#initialize attrs default to empty hash. Remove empty hash provision in specs.
   * Reusing builders
   * Replace String>>#to_class implementation from stack overflow article with a spec'd/tested version
 

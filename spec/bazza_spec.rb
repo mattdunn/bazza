@@ -13,7 +13,7 @@ describe Bazza do
         before do
           class OrderBuilder
             def build
-              Order.new({}) 
+              Order.new 
             end
           end
         end
