@@ -50,6 +50,12 @@ License
 TODO
 ----
 
+  * Rename github project to bazza
+  * Class>>#build interpolate builder string rather than concat
+  * Split bob spec by building/defaulting to reduce nesting
+  * Gemfile: make rspec dev dependency
+  * Overriding defaults
+  * Reusing builders
   * Replace String>>#to_class implementation from stack overflow article with a spec'd/tested version
 
 Notes
