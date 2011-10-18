@@ -57,20 +57,10 @@ Notes
 -----
 
 * Old school way:
-
+<pre>
 orderBuilder = OrderBuilder.new.with(:total => 22.21).makeActive
 customer = CustomerBuilder.with(:orderBuilder => orderBuilder).build
-
+</pre>
 * Aim:
 
 Customer.with.Order.with(:total => 22.21).thats.active
-
-- with
-  - no args: assumes next token is class name of associated attribute
-    - no-op, return self
-    - next message expected to be class name, resolve via method missing?  
-      - What about other method missing handlers? Better to return instance of class rather than self that permits chaining.
-    - attributeBuilder
-    
-  - args: attributes of target being built
-
