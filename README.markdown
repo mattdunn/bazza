@@ -9,8 +9,9 @@ Build objects easily:
   * reuse builder instances to create multiple objects
   * specialise builders
   * Readable usage
+
 ```ruby
-customer = Customer.with.Order.with(:total => 22.21).thats.active
+customer = Customer.with.Order.with(:total => 22.21).thats.active.build
 ```
 
 Why not a use factory?
@@ -23,7 +24,7 @@ An Example
 ----------
 
 ```ruby
-customer = Customer.with.Order.with(:total => 22.21).thats.active
+customer = Customer.with.Order.with(:total => 22.21).thats.active.build
 ```
 
 class Customer
@@ -49,18 +50,14 @@ License
 
 TODO
 ----
-
+  
+  * Specialisation of defaults
+  * #initialize and #build should be already available to builder 
+  * #with and #thats can't be combined at present
+  * Association: single/many
   * Reusing builders
   * Replace String>>#to_class implementation from stack overflow article with a spec'd/tested version
-
-Notes
------
-
-* Old school way:
-<pre>
-orderBuilder = OrderBuilder.new.with(:total => 22.21).makeActive
-customer = CustomerBuilder.with(:orderBuilder => orderBuilder).build
-</pre>
-* Aim:
-
-Customer.with.Order.with(:total => 22.21).thats.active
+  * Order.thats.active.build: Alternative syntax => Build.order.thats.active
+    * Advantage is Class extension no longer needed
+    * How to know when to build the instance?
+  

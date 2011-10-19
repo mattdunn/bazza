@@ -1,10 +1,14 @@
 class Class
   def build
-   builderClass.new.build
+    builderClass.new.build
   end 
   
   def with(args)
     builderClass.new(args)
+  end
+  
+  def thats
+    with({})
   end
   
   private 

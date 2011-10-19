@@ -54,4 +54,26 @@ describe Bazza do
       end
     end
   end
+  
+  describe 'specialising' do
+    context 'by adding methods to builder class' do
+      before do
+        class OrderBuilder
+          def initialize(attrs = {})
+            @defaults = attrs
+          end
+          def build
+            Order.new(@defaults)
+          end
+          def active
+            @defaults.merge!(:state => :active)
+            self
+          end
+        end
+      end
+      it 'creates specialised instance' do
+        Order.thats.active.build.state.should == :active
+      end
+    end
+  end
 end
