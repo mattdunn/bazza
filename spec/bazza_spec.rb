@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'models/order'
 
 describe Bazza do
   describe 'building' do
@@ -73,6 +72,14 @@ describe Bazza do
       end
       it 'creates specialised instance' do
         Order.thats.active.build.state.should == :active
+      end
+    end
+  end
+  
+  describe 'associating' do
+    describe 'one to one' do
+      it 'BLAH' do
+        Customer.with.Order.build
       end
     end
   end

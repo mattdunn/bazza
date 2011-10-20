@@ -51,14 +51,18 @@ License
 TODO
 ----
   
-  * Specialisation of defaults
+  * Association: 
+    * single
+    * many
+      * Build multiple: Customer.with.two.Orders
+  * Specialisation
+    * infer #make#{Something} method convention for specialisation methods on builder?
   * #initialize and #build should be already available to builder 
   * #with and #thats can't be combined at present
-  * Association: single/many
-    * Many: Customer.with.two.Orders
   * Reusing builders
   * Replace String>>#to_class implementation from stack overflow article with a spec'd/tested version
-  * Order.thats.active.build: Alternative syntax => Build.order.thats.active
+  * Alternative syntax:
+    * Order.thats.active.build => Build.order.thats.active
     * Advantage is Class extension no longer needed
     * How to know when to build the instance?
   
