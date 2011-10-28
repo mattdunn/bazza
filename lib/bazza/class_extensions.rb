@@ -3,7 +3,7 @@ class Class
     builderClass.new.build
   end 
   
-  def with(args)
+  def with(args = {})
     builderClass.new(args)
   end
   

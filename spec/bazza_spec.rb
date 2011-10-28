@@ -77,9 +77,16 @@ describe Bazza do
   end
   
   describe 'associating' do
+    before do
+      class CustomerBuilder
+        def method_missing(sym, *arguments, &block)
+          sym.to_s.to_class.with({})
+        end
+      end
+    end
     describe 'one to one' do
-      it 'BLAH' do
-        Customer.with.Order.build
+      it 'creates instance with dependency' do
+        Customer.with.Order.build.should be_an_instance_of Order
       end
     end
   end
