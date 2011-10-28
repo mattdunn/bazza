@@ -1,24 +1,19 @@
 bazza - the builder [![Build Status](https://secure.travis-ci.org/mattdunn/bazza.png)](http://travis-ci.org/mattdunn/bazza)
 =======
 
-Build objects easily:
-
-  * specify defaults
-    * tailor defaults within tests at build time with optional hash or block
-  * chain builders
-  * reuse builder instances to create multiple objects
-  * specialise builders
-  * Readable usage
+Build up objects close to where they're being used. 
 
 ```ruby
 customer = Customer.with.Order.with(:total => 22.21).thats.active.build
 ```
 
-Why not a use factory?
+You can:
 
-  * Common for consumers of builders to:
-    * specialise defaults; provide a readable way to accommodate this;
-    * build several objects of the same type; 
+  * specify defaults
+    * override defaults with optional hash
+  * reuse builders
+  * chain builders
+  * specialise builders
 
 An Example
 ----------
@@ -53,6 +48,8 @@ TODO
   
   * Association: 
     * single
+      * implement responds_to whereever method_missing implemented
+      * dynamically add the methods to builder, based on instance being built?
     * many
       * Build multiple: Customer.with.two.Orders
   * Specialisation
