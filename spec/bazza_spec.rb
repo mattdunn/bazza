@@ -79,6 +79,8 @@ describe Bazza do
   describe 'associating' do
     before do
       class CustomerBuilder
+        def initialize(attrs = {})
+        end
         def method_missing(sym, *arguments, &block)
           sym.to_s.to_class.with({})
         end
