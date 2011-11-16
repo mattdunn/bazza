@@ -10,7 +10,7 @@ customer = Customer.with.Order.with(:total => 22.21).thats.active.build
 You can:
 
   * specify defaults
-    * override defaults with optional hash
+    * can be overridden
   * reuse builders
   * chain builders
   * specialise builders
@@ -39,8 +39,9 @@ License
 -------
 
 <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">
-  <img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="Creative Commons License" style="border:none;" height="31" width="88">
+  <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/3.0/88x31.png" />
 </a>
+<br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.
 
 
 TODO
@@ -49,9 +50,11 @@ TODO
   * Association: 
     * single
       * implement responds_to whereever method_missing implemented
+      * ponder adding default hash param to #with
       * dynamically add the methods to builder, based on instance being built?
     * many
       * Build multiple: Customer.with.two.Orders
+      * linguistics gem for text to number conversion
   * Specialisation
     * infer #make#{Something} method convention for specialisation methods on builder?
   * #initialize and #build should be already available to builder 
